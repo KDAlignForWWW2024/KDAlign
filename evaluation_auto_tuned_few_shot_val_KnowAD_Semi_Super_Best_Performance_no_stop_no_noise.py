@@ -333,12 +333,18 @@ if __name__=='__main__':
         print(target_model)
         print('————————',dataset_name,'数据集在划分版本',dataset_suffix[1:],' WSAD下的FeaWAD和KDAlign_FeaWAD模型的调参过程开始————————\n')
 
-        epoch = [20,50]
-        lr = [0.001, 0.01]
-        hidden_dim=[32,64,128,256]
-        layer_num = range(2, 4) 
-        lamb=[0.01,0.05,0.1,0.5,1.0,1.5,3.0]                     
-
+        if(dataset_name=='Amazon'):
+            epoch = [20,50]
+            lr = [0.001, 0.01]
+            hidden_dim=[32,64,128,256]
+            layer_num = range(2, 4)
+            lamb=[0.01,0.05,0.1,0.5,1.0,1.5,3.0]
+        elif(dataset_name == 'Cardiotocography'):
+            epoch = [20,100]
+            lr = [0.001, 0.01]
+            hidden_dim=[32,64,128,256]
+            layer_num = range(2, 4)
+            lamb=[0.01,0.05,0.1,0.5,1.0,1.5,3.0]
 
         FeaWAD_and_KDAlign_FeaWAD_model_para_and_acc_statistics = {'epoch':[],'labeled_anomaly_samples':[],'layer_num':[],'learning_rate': [],'hidden_dim': [],'lamb':[],
                                                         'FeaWAD_Val_Best_F1_K': [], 'KDAlign_FeaWAD_Val_Best_F1_K': [],
