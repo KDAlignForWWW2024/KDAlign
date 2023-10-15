@@ -454,7 +454,7 @@ if __name__=='__main__':
 
             # Save experimental results as a csv file
 
-            saved_FeaWAD_and_KDAlign_FeaWAD_auto_tune_path=records_saved_path+dataset_suffix[1:]+'_WSAD_With_Validation/'+target_model+'/'+dataset_name+'_Best_and_Avg_FeaWAD_And_KDAlign_FeaWAD_Model_Auto_Tuned_Records'+dataset_suffix+'_no_stop_no_noise.csv'
+            saved_FeaWAD_and_KDAlign_FeaWAD_auto_tune_path=records_saved_path+dataset_suffix[1:]+'_WSAD_With_Validation/'+target_model+'/'+dataset_name+'_Best_and_Avg_FeaWAD_And_KDAlign_FeaWAD_Model_Auto_Tuned_Records'+dataset_suffix+'.csv'
 
             FeaWAD_and_KDAlign_FeaWAD_model_para_and_acc_statistics['epoch'].append(epoch)     
             FeaWAD_and_KDAlign_FeaWAD_model_para_and_acc_statistics['labeled_anomaly_samples'].append(labeled_anomaly_samples)   
